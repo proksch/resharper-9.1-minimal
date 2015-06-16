@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RS9-Example", "RS9-Example\RS9-Example.csproj", "{31086EAB-EEC2-4909-9204-44FA5EADDCA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RS9-Example-Test", "RS9-Example-Test\RS9-Example-Test.csproj", "{C7B7AB33-8F31-464C-A064-1C51944E533A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31086EAB-EEC2-4909-9204-44FA5EADDCA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31086EAB-EEC2-4909-9204-44FA5EADDCA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31086EAB-EEC2-4909-9204-44FA5EADDCA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31086EAB-EEC2-4909-9204-44FA5EADDCA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7B7AB33-8F31-464C-A064-1C51944E533A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7B7AB33-8F31-464C-A064-1C51944E533A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7B7AB33-8F31-464C-A064-1C51944E533A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7B7AB33-8F31-464C-A064-1C51944E533A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

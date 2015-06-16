@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+    <metadata>
+        <id>RS9.Example</id>
+        <version>1.0.0-alpha1</version>
+        <title>R#9.1 Example</title>
+        <authors>Some Authors</authors>
+        <description>Minimal example of a working code completion in ReSharper 9.1</description>
+        <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.txt</licenseUrl>
+        <copyright>Copyright 2013-2015</copyright>
+        <dependencies>
+            <dependency id="Wave" version="[2.0]" />
+            <!-- if the following is uncommented, the installation fails "cannot resolve..."
+            <dependency id="JetBrains.ReSharper.SDK" version="[9.1,9.2)" />
+            -->
+        </dependencies>
+    </metadata>
+    <files>
+		<file src="RS9-Example\bin\Debug\RS9-Example.dll" target="DotFiles\RS9-Example.dll" />
+    </files>
+</package>
