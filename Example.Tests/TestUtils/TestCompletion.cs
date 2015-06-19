@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using Example.Completion;
 using Example.Helper;
 using JetBrains.ReSharper.Feature.Services.CodeCompletion.Infrastructure.LookupItems;
 using JetBrains.ReSharper.Feature.Services.CSharp.CodeCompletion.Infrastructure;
@@ -21,17 +22,17 @@ using JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp;
 
-namespace Example.Completion
+namespace Example.TestUtils
 {
     /// <summary>
-    ///     Should only be loaded in production mode
+    ///     Should only be loaded in test mode
     /// </summary>
     [Language(typeof (CSharpLanguage))]
-    internal class ProdCompletion : CSharpItemsProviderBasic
+    internal class TestCompletion : CSharpItemsProviderBasic
     {
         private readonly ContextAnalysis _contextAnalysis;
 
-        public ProdCompletion(IHelper helper)
+        public TestCompletion(IHelper helper)
         {
             _contextAnalysis = new ContextAnalysis(helper);
         }

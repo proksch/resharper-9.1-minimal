@@ -15,22 +15,19 @@
  */
 
 using Example.Helper;
-using JetBrains.ReSharper.Feature.Services.CSharp.CodeCompletion.Infrastructure;
+using JetBrains.Application;
 
-namespace Example.Completion
+namespace Example.TestUtils
 {
-    public class ContextAnalysis
+    /// <summary>
+    ///     Should only be loaded in test mode
+    /// </summary>
+    [ShellComponent]
+    internal class TestHelper : IHelper
     {
-        private readonly IHelper _helper;
-
-        public ContextAnalysis(IHelper helper)
+        public int GetSomeInformationOnlyAvailableInProdMode()
         {
-            _helper = helper;
-        }
-
-        public void Analyze(CSharpCodeCompletionContext context)
-        {
-            var info = _helper.GetSomeInformationOnlyAvailableInProdMode();
+            return 0;
         }
     }
 }

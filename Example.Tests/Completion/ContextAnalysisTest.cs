@@ -14,23 +14,22 @@
  * limitations under the License.
  */
 
-using Example.Helper;
-using JetBrains.ReSharper.Feature.Services.CSharp.CodeCompletion.Infrastructure;
+using JetBrains.ReSharper.FeaturesTestFramework.Completion;
+using NUnit.Framework;
 
 namespace Example.Completion
 {
-    public class ContextAnalysis
+    internal class ContextAnalysisTest : CodeCompletionTestBase
     {
-        private readonly IHelper _helper;
-
-        public ContextAnalysis(IHelper helper)
+        protected override CodeCompletionTestType TestType
         {
-            _helper = helper;
+            get { return CodeCompletionTestType.List; }
         }
 
-        public void Analyze(CSharpCodeCompletionContext context)
+        [Test]
+        public void TestSomething()
         {
-            var info = _helper.GetSomeInformationOnlyAvailableInProdMode();
+            DoNamedTest2();
         }
     }
 }

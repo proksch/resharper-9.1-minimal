@@ -13,6 +13,7 @@
     <AssemblyName>Example.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <JetTestProject>True</JetTestProject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -129,12 +130,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Completion\SomeTest.cs" />
-    <Compile Include="Completion\TestCompletion.cs" />
-    <Compile Include="Helper\TestHelper.cs" />
+    <Compile Include="Completion\ContextAnalysisTest.cs" />
+    <Compile Include="TestUtils\TestCompletion.cs" />
+    <Compile Include="TestUtils\TestHelper.cs" />
     <Compile Include="TestEnvironment.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Example.licenseheader" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

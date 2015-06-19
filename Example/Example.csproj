@@ -152,6 +152,7 @@
     <Compile Include="ZoneMarker.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Example.licenseheader" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
