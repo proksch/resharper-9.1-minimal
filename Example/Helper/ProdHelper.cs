@@ -1,9 +1,14 @@
 ﻿using JetBrains.Application;
+using JetBrains.Application.BuildScript.Application.Zones;
 
 namespace Example.Helper
 {
     [ShellComponent]
-    class ProdHelper : IHelper
+    public class ProdHelper : IHelper
     {
+        public ProdHelper()
+        {
+            
+        }
     }
 }

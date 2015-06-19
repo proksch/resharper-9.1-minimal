@@ -1,10 +1,13 @@
-﻿using Example.Helper;
-using JetBrains.Application;
+﻿using JetBrains.Application;
 
-namespace Example.Tests.Helper
+namespace Example.Helper
 {
     [ShellComponent]
     internal class TestHelper : IHelper
     {
+        public TestHelper()
+        {
+            
+        }
     }
 }

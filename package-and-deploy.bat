@@ -4,6 +4,8 @@
 :: to package a specific project or file, add the .csproj or .nupkg file name after the pack option
 :: -NoPackageAnalysis suppresses warnings, caused by R# bundles not adhering to the NuGet structure conventions
 
+
+
 set TIME1=%time::=%
 set TIME2=%TIME1: =0%
 set TIME3=%TIME2:~0,-3%
@@ -14,6 +16,9 @@ set DATE1=%date:~-4,4%%date:~-10,2%%date:~-7,2%
 
 set TIMESTAMP=%DATE1%-%TIME3%
 echo Building @ %TIMESTAMP%...
+
+
+msbuild RS9-Solution.sln
 
 set TARGET=C:\Users\seb\Desktop\KaVE-Debug-Feed\
 

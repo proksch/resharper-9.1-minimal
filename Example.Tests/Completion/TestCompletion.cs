@@ -1,5 +1,4 @@
-﻿using Example.Completion;
-using Example.Helper;
+﻿using Example.Helper;
 using JetBrains.ReSharper.Feature.Services.CodeCompletion.Infrastructure.LookupItems;
 using JetBrains.ReSharper.Feature.Services.CodeCompletion.Infrastructure.LookupItems.Impl;
 using JetBrains.ReSharper.Feature.Services.CSharp.CodeCompletion.Infrastructure;
@@ -7,7 +6,7 @@ using JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp;
 
-namespace Example.Tests.Completion
+namespace Example.Completion
 {
     [Language(typeof (CSharpLanguage))]
     internal class TestCompletion : CSharpItemsProviderBasic

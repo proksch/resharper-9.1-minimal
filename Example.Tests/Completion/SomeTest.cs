@@ -1,11 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using JetBrains.ProjectModel;
+using JetBrains.ReSharper.FeaturesTestFramework.Completion;
+using JetBrains.ReSharper.TestFramework;
+using JetBrains.TestFramework.Projects;
+using NUnit.Framework;
 
-namespace Example.Tests.Completion
+namespace Example.Completion
 {
-    class SomeTest
+    [TestNetFramework4]
+    internal class SomeTest : CodeCompletionTestBase
     {
+        protected override CodeCompletionTestType TestType
+        {
+            get { return CodeCompletionTestType.List; }
+        }
+
+        [Test]
+        public void DoSomeTest()
+        {
+            DoOneTest("blubb");
+        }
     }
 }
