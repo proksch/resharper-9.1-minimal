@@ -8,8 +8,8 @@
     <ProjectGuid>{31086EAB-EEC2-4909-9204-44FA5EADDCA3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RS9_Example</RootNamespace>
-    <AssemblyName>RS9-Example</AssemblyName>
+    <RootNamespace>Example</RootNamespace>
+    <AssemblyName>Example</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -144,7 +144,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyCompletion.cs" />
+    <Compile Include="Completion\ContextAnalysis.cs" />
+    <Compile Include="Completion\ProdCompletion.cs" />
+    <Compile Include="Helper\ProdHelper.cs" />
+    <Compile Include="Helper\IHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ZoneMarker.cs" />
   </ItemGroup>

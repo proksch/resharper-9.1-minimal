@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RS9-Example", "RS9-Example\RS9-Example.csproj", "{31086EAB-EEC2-4909-9204-44FA5EADDCA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{31086EAB-EEC2-4909-9204-44FA5EADDCA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RS9-Example-Test", "RS9-Example-Test\RS9-Example-Test.csproj", "{C7B7AB33-8F31-464C-A064-1C51944E533A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Tests", "Example.Tests\Example.Tests.csproj", "{C7B7AB33-8F31-464C-A064-1C51944E533A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

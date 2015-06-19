@@ -1,5 +1,5 @@
-﻿using System.IO;
-using JetBrains.Application;
+﻿using Example.Completion;
+using Example.Helper;
 using JetBrains.ReSharper.Feature.Services.CodeCompletion.Infrastructure.LookupItems;
 using JetBrains.ReSharper.Feature.Services.CodeCompletion.Infrastructure.LookupItems.Impl;
 using JetBrains.ReSharper.Feature.Services.CSharp.CodeCompletion.Infrastructure;
@@ -7,13 +7,21 @@ using JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp;
 
-namespace RS9_Example
+namespace Example.Tests.Completion
 {
     [Language(typeof (CSharpLanguage))]
-    internal class MyCompletion : CSharpItemsProviderBasic
+    internal class TestCompletion : CSharpItemsProviderBasic
     {
+        private readonly IHelper _helper;
+
+        public TestCompletion(IHelper helper)
+        {
+            _helper = helper;
+        }
+
         protected override bool IsAvailable(CSharpCodeCompletionContext context)
         {
+            new ContextAnalysis(_helper).Analyze(context);
             return true;
         }
 
@@ -22,16 +30,6 @@ namespace RS9_Example
             var item = new TextLookupItem("hello");
             collector.Add(item);
             return base.AddLookupItems(context, collector);
-        }
-    }
-
-    [ShellComponent]
-    internal class MyComponent
-    {
-        public MyComponent()
-        {
-            // trying to figure out, when/if this is loaded
-            File.WriteAllText(@"C:\Users\seb\MyComponent_ctor.txt", "it works");
         }
     }
 }

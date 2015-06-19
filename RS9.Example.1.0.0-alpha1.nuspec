@@ -13,6 +13,6 @@
         </dependencies>
     </metadata>
     <files>
-		<file src="RS9-Example\bin\Debug\RS9-Example.dll" target="DotFiles\RS9-Example.dll" />
+		<file src="Example\bin\Debug\Example.dll" target="DotFiles\Example.dll" />
     </files>
 </package>
