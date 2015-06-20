@@ -14,31 +14,16 @@
  * limitations under the License.
  */
 
-using System;
-using JetBrains.Application.BuildScript.Application.Zones;
-using JetBrains.ReSharper.TestFramework;
-using JetBrains.TestFramework;
-using JetBrains.TestFramework.Application.Zones;
-using NUnit.Framework;
+using JetBrains.Application;
 
-[ZoneDefinition]
-// ReSharper disable once CheckNamespace
-public interface IExampleTestZone : ITestsZone, IRequire<PsiFeatureTestZone>
+namespace Example.Helper
 {
-}
-
-[SetUpFixture]
-public class TestEnvironmentAssembly : ExtensionTestEnvironmentAssembly<IExampleTestZone>
-{
-    public override void TearDown()
+    [ShellComponent]
+    public class SharedComponent
     {
-        try
+        public int GetSomeSharedStuff()
         {
-            base.TearDown();
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
+            return 0;
         }
     }
 }

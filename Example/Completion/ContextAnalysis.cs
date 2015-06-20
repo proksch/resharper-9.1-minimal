@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using System;
 using Example.Helper;
 using JetBrains.ReSharper.Feature.Services.CSharp.CodeCompletion.Infrastructure;
 
@@ -22,15 +23,19 @@ namespace Example.Completion
     public class ContextAnalysis
     {
         private readonly IHelper _helper;
+        private readonly SharedComponent _sc;
 
-        public ContextAnalysis(IHelper helper)
+        public ContextAnalysis(IHelper helper, SharedComponent sc)
         {
             _helper = helper;
+            _sc = sc;
         }
 
         public void Analyze(CSharpCodeCompletionContext context)
         {
             var info = _helper.GetSomeInformationOnlyAvailableInProdMode();
+            var info2 = _sc.GetSomeSharedStuff();
+            Console.WriteLine("context was analyzed!");
         }
     }
 }

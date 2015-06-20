@@ -17,7 +17,7 @@
 using JetBrains.ReSharper.FeaturesTestFramework.Completion;
 using NUnit.Framework;
 
-namespace Example.Completion
+namespace Example.Tests.Completion
 {
     internal class ContextAnalysisTest : CodeCompletionTestBase
     {

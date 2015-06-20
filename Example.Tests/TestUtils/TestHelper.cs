@@ -17,7 +17,7 @@
 using Example.Helper;
 using JetBrains.Application;
 
-namespace Example.TestUtils
+namespace Example.Tests.TestUtils
 {
     /// <summary>
     ///     Should only be loaded in test mode

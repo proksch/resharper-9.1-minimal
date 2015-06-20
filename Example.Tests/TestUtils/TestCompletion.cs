@@ -22,7 +22,7 @@ using JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp;
 
-namespace Example.TestUtils
+namespace Example.Tests.TestUtils
 {
     /// <summary>
     ///     Should only be loaded in test mode
@@ -32,9 +32,9 @@ namespace Example.TestUtils
     {
         private readonly ContextAnalysis _contextAnalysis;
 
-        public TestCompletion(IHelper helper)
+        public TestCompletion(IHelper helper, SharedComponent sc)
         {
-            _contextAnalysis = new ContextAnalysis(helper);
+            _contextAnalysis = new ContextAnalysis(helper, sc);
         }
 
         protected override bool IsAvailable(CSharpCodeCompletionContext context)
