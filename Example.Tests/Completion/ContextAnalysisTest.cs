@@ -19,7 +19,7 @@ using NUnit.Framework;
 
 namespace Example.Tests.Completion
 {
-    internal class ContextAnalysisTest : CodeCompletionTestBase
+    internal class ContextAnalysisTest : BaseCodeCompletionTest
     {
         protected override CodeCompletionTestType TestType
         {
@@ -29,7 +29,54 @@ namespace Example.Tests.Completion
         [Test]
         public void TestSomething()
         {
-            DoNamedTest2();
+            DoAutoCompletion(@"
+            namespace N
+            {
+                interface I
+                {
+                    void M(int i);
+                }
+
+                abstract class C1 : I
+                {
+                    public virtual void M(int i) { }
+                }
+
+                class C2 : C1
+                {
+                    public override void M(int i)
+                    {
+                        {caret}
+                    }
+                }
+            }");
+
+            Assert.AreEqual(64, LookupItems.Count);
+            Assert.IsTrue(LookupItemExists("i"));
+            Assert.IsFalse(LookupItemExists("C"));
+        }
+
+        [Test]
+        public void TestSomethingElse()
+        {
+            DoAutoCompletion(@"
+            using System;
+            using System.Collections.Generic;
+            using System.IO;
+                
+            namespace N 
+            {
+                public class C 
+                { 
+                    public void M(int param)
+                    {
+                        par{caret}
+                    }
+                }
+            }");
+
+            Assert.IsTrue(LookupItemExists("param"));
+            Assert.IsFalse(LookupItemExists("C1"));
         }
     }
 }

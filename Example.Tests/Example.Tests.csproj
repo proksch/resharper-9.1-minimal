@@ -124,12 +124,14 @@
     <Reference Include="Vestris.ResourceLib">
       <HintPath>..\packages\Vestris.ResourceLib.JetBrains.1.4.20150303.0\lib\Net\Vestris.ResourceLib.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
     <Reference Include="WpfContrib">
       <HintPath>..\packages\JetBrains.Platform.Lib.WpfContrib.2.0.20140304.0\lib\WpfContrib.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Completion\ContextAnalysisTest.cs" />
+    <Compile Include="BaseCodeCompletionTest.cs" />
     <Compile Include="TestUtils\TestCompletion.cs" />
     <Compile Include="TestUtils\TestHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
