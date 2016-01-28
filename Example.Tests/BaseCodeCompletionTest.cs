@@ -55,7 +55,7 @@ namespace Example.Tests
 
         protected bool LookupItemExists(string name)
         {
-            return LookupItems.Any(x => x.Identity == name);
+            return false; // LookupItems.Any(x => x.Identity == 0);
         }
     }
 }
