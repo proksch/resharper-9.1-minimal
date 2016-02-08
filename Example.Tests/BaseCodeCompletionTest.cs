@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Linq.Expressions;
 using JetBrains.Application.Settings;
 using JetBrains.ReSharper.Feature.Services.CodeCompletion;
 using JetBrains.ReSharper.Feature.Services.CodeCompletion.Infrastructure.LookupItems;
-using JetBrains.ReSharper.Feature.Services.CodeCompletion.Infrastructure.LookupItems.Impl;
-using JetBrains.ReSharper.Feature.Services.CodeCompletion.Settings;
 using JetBrains.ReSharper.Feature.Services.Lookup;
 using JetBrains.ReSharper.FeaturesTestFramework.Completion;
 using JetBrains.ReSharper.TestFramework;
@@ -51,11 +47,18 @@ namespace Example.Tests
             //var result2 = GetCompletionResult(textControl, intellisenseManager, single, sorting, out filteredItems);
 
             LookupItems = new List<ILookupItem>(result.LookupItems);
+
+            // ..here
+            //var allTexts = LookupItems.Select(li => li.DisplayName.Text);
         }
 
         protected bool LookupItemExists(string name)
         {
-            return LookupItems.Any(x => x.DisplayName.ToString().Contains(name));
+            // access to DisplayName is missing a guard here, but not... (see above)
+
+            // workaround for now:
+            var expected = string.Format("{0};", name);
+            return LookupItems.Any(x => x.ToString().StartsWith(expected));
         }
     }
 }
