@@ -3,3 +3,4 @@
 **/obj/*
 **/*.user
 **/*.suo
+**/adhoc_snippet.cs
